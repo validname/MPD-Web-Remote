@@ -38,6 +38,14 @@
   background: url("../images/next.png") no-repeat 0 0;
 }
 
+#stopButton
+{
+  float: left;
+  width: 60px;
+  height: 48px;
+  background: url("../images/stop.png") no-repeat 0 0;
+}
+
 .buttonWrapper
 {
   /*position: absolute;
@@ -49,7 +57,7 @@
 {
   margin-left: auto;
   margin-right: auto;
-  width:260px;
+  width: 320px;
 }
 
 #buttonBackgroundFiller

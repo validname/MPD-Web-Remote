@@ -34,6 +34,7 @@ switch ($action)
   case "Pause":          $mpd->Pause();              break;
   case "Next":           $mpd->Next();               break;
   case "Previous":       $mpd->Previous();           break;
+  case "Stop":           $mpd->Stop();               break;
   case "SkipTo":         $mpd->SkipTo($track);       break;
   case "RandomOn":       $mpd->SetRandom(1);         break;
   case "RandomOff":      $mpd->SetRandom(0);         break;

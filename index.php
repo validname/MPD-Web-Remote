@@ -96,6 +96,7 @@
 	<div id="bottombar" class="buttonWrapper">
 		<div id="buttonHolder">
 			<span id="previousButton"></span>
+			<span id="stopButton"></span>
 			<span id="playPauseButton" class="play"></span>
 			<span id="nextButton"></span>
 		</div>

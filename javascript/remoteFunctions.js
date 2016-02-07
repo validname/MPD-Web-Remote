@@ -14,6 +14,7 @@ var addEventListeners = function()
 	var previousButton = document.getElementById("previousButton");
 	var playPauseButton = document.getElementById("playPauseButton");
 	var nextButton = document.getElementById("nextButton");
+	var stopButton = document.getElementById("stopButton");
 	var volUpButton = document.getElementById("volumeUp");
 	var volDownButton = document.getElementById("volumeDown");
 
@@ -21,6 +22,7 @@ var addEventListeners = function()
 	shuffleCheckbox.addEventListener("click", toggleRandom, false);
 	previousButton.addEventListener("click", previous, false);
 	playPauseButton.addEventListener("click", playPause, false);
+	stopButton.addEventListener("click", stop, false);
 	nextButton.addEventListener("click", next, false);
 	volUpButton.addEventListener("click", volumeUp, false);
 	volDownButton.addEventListener("click", volumeDown, false);
@@ -151,6 +153,13 @@ var previousMPD = function()
 	xmlhttp.send();
 }
 
+var stopMPD = function()
+{
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.open("GET", mpdControlFile + "?action=Stop", false);
+	xmlhttp.send();
+}
+
 var playPause = function()
 {
 	if (status == "play") // then pause
@@ -174,6 +183,12 @@ var next = function()
 var previous = function()
 {
 	previousMPD();
+	updatePage();
+}
+
+var stop = function()
+{
+	stopMPD();
 	updatePage();
 }
 
